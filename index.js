@@ -13,3 +13,34 @@ function matchName(drivers, search){
     console.log (drivers);
     return result;
 }
+
+
+const oldAccounts = [
+    { userID: 15, title: "Developer Apprentice", accessLevel: "user" },
+    { userID: 63, title: "Developer Apprentice", accessLevel: "user" },
+    { userID: 97, title: "Developer Apprentice", accessLevel: "user" },
+    { userID: 12, title: "Developer Apprentice", accessLevel: "user" },
+    { userID: 44, title: "Developer Apprentice", accessLevel: "user" },
+  ];
+  
+  const newEngineers = map(oldAccounts, function (account) {
+    return Object.assign({}, account, { accessLevel: "admin" });
+  });
+  
+ console.log (oldAccounts);
+  // => [
+  //      { userID: 15, title: "Developer Apprentice", accessLevel: "user" },
+  //      { userID: 63, title: "Developer Apprentice", accessLevel: "user" },
+  //      { userID: 97, title: "Developer Apprentice", accessLevel: "user" },
+  //      { userID: 12, title: "Developer Apprentice", accessLevel: "user" },
+  //      { userID: 44, title: "Developer Apprentice", accessLevel: "user" }
+  //    ]
+  
+  console.log(newEngineers);
+  // => [
+  //      { userID: 15, title: "Developer Apprentice", accessLevel: "admin" },
+  //      { userID: 63, title: "Developer Apprentice", accessLevel: "admin" },
+  //      { userID: 97, title: "Developer Apprentice", accessLevel: "admin" },
+  //      { userID: 12, title: "Developer Apprentice", accessLevel: "admin" },
+  //      { userID: 44, title: "Developer Apprentice", accessLevel: "admin" }
+  //    ]
